@@ -14,7 +14,7 @@ const imagemin = require("gulp-imagemin");
 const imgCompress = require("imagemin-jpeg-recompress");
 
 function styles() {
-    return gulp.src("app/sass/**/*.sass")
+    return gulp.src("app/sass/**/*.scss")
         .pipe(plumber({
             errorHandler: notify.onError(function (err) {
                 return {
@@ -36,7 +36,7 @@ function styles() {
 function scripts() {
     return gulp.src([
         // "app/js/libs.js",
-        "app/js/main.js"
+        "app/js/common.js"
     ])
         .pipe(plumber({
             errorHandler: notify.onError(function (err) {
@@ -84,7 +84,7 @@ function watch() {
     });
 
     gulp.watch("app/**/*.html").on("change", browserSync.reload);
-    gulp.watch("app/sass/**/*.sass", gulp.series(styles));
+    gulp.watch("app/sass/**/*.scss", gulp.series(styles));
     gulp.watch(["app/js/main.js", "app/js/libs.js"], gulp.series(scripts));
     gulp.watch("app/img/src/**/*.{png,jpg,jpeg,webp,raw}", gulp.series(images))
 }
