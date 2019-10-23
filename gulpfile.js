@@ -35,7 +35,7 @@ function styles() {
 
 function scripts() {
     return gulp.src([
-        // "app/js/libs.js",
+        "node_modules/jquery/dist/jquery.min.js",
         "app/js/common.js"
     ])
         .pipe(plumber({
@@ -85,7 +85,7 @@ function watch() {
 
     gulp.watch("app/**/*.html").on("change", browserSync.reload);
     gulp.watch("app/sass/**/*.scss", gulp.series(styles));
-    gulp.watch(["app/js/main.js", "app/js/libs.js"], gulp.series(scripts));
+    gulp.watch(["app/js/common.js"], gulp.series(scripts));
     gulp.watch("app/img/src/**/*.{png,jpg,jpeg,webp,raw}", gulp.series(images))
 }
 
