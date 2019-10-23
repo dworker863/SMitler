@@ -36,6 +36,7 @@ function styles() {
 function scripts() {
     return gulp.src([
         "node_modules/jquery/dist/jquery.min.js",
+        "node_modules/mmenu-js/dist/mmenu.js",
         "app/js/common.js"
     ])
         .pipe(plumber({
