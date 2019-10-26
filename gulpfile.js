@@ -68,8 +68,7 @@ function images(done) {
                 quality: 'high'
             }),
             imagemin.gifsicle({ interlaced: true }),
-            imagemin.optipng({ optimizationLevel: 5 }),
-            imagemin.svgo()
+            imagemin.optipng({ optimizationLevel: 5 })            
         ]))
         .pipe(gulp.dest("app/img/" + size))
         .pipe(browserSync.stream());

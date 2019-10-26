@@ -3,7 +3,53 @@
 @import "libs";
 
 body {
-    background-color: $blue;
-    font-family: "Fira Sans";
-    font-weight: 400;
+// 	font-size: 16px;
+// 	min-width: 320px;
+// 	position: relative;
+	line-height: 1.75;
+	font-family: $default-font;
+// 	overflow-x: hidden;
+// 	opacity: 1;
 }
+
+
+header {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+    .top-line {
+        position: relative;
+        padding-top: 2.5rem;
+        padding-left: 2.55rem;
+    }
+        .logo img{
+            width: 126px;
+            // height: auto;
+        }
+        .phone {
+            font-family: Fira Sans, sans-serif;
+            font-size: 1.3rem;
+            color: #ffffff;
+            position: absolute;
+            right: 5.3125rem;
+            top: 2.5rem;
+            white-space: nowrap;
+        }
+            .fas {
+                font-size: 1.075rem;
+                color: #555555;
+                margin-right: 0.5rem;
+                margin-bottom: 2rem;
+            }
+        .hamburger {
+            position: absolute;
+            right: 0;
+            top: 30px;
+        }
+            .hamburger-inner, .hamburger-inner:before, .hamburger-inner:after {
+                background-color: #ffffff;
+                width: 34px;
+                height: 2px;
+                border-radius: 0;
+            }
