@@ -20,11 +20,19 @@
     }
   }
 
-  .services .owl-item:nth-child(odd) {
-    .carousel-services-item {
-      flex-direction: column;
+  .services {
+    .owl-item:nth-child(odd) {
+      .carousel-services-item {
+        flex-direction: column;
+      }
     }
-  }  
+  }
+  
+  .photos {
+    p:last-child {
+      margin-bottom: 3rem;
+    }
+  }
 }
 
 @include media-breakpoint-down(md) {

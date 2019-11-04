@@ -39,6 +39,7 @@ function scripts() {
         "node_modules/mmenu-js/dist/mmenu.js",
         "node_modules/owl.carousel/dist/owl.carousel.js",
         "app/libs/equalHeight/src/jquery.equalheights.js",
+        "app/libs/fotorama/fotorama.js",
         "app/js/common.js"
     ])
         .pipe(plumber({

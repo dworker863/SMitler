@@ -19,6 +19,17 @@ ul {
   list-style-type: none;
 }
 
+section {
+  position: relative;
+  .h2 {
+    font-size: 1.875rem;
+    color: $accent;
+    span {
+      color: #ffffff;      
+    }
+  }
+}
+
 .h1,
 .h2,
 .h3,
@@ -26,6 +37,10 @@ ul {
 .h5,
 .h6 {
   text-transform: uppercase;
+}
+
+.inverse {
+  color: #ffffff;  
 }
 
 .button {
@@ -461,6 +476,70 @@ $colors: $blue, $red, $accent;
     .fas {
       font-size: 1.2rem;
     }
+  }
+}
+
+.photos {
+  padding: 5% 2.5rem;
+
+  p {
+    font-size: 1.125rem;
+    margin-top: 1.4rem;
+  }
+
+  .fotorama__stage {
+    background-color: rgba(#151515, .4);
+  }
+
+  .fotorama__nav-wrap {
+    position: absolute;
+    width: 100%;
+    bottom: 1.875rem;
+    padding-right: 1.875rem;
+    padding-left: 1.875rem;
+  }
+
+  .fotorama__nav:before, .fotorama__stage:before {
+    display: none;
+  }
+
+  .fotorama__nav:after, .fotorama__stage:after {
+    display: none;
+  }
+
+  .fotorama__thumb-border {
+    border-color: $blue;
+  }
+
+  .fotorama__loaded--img {
+    outline: 4px solid $accent;
+  }
+
+  .fotorama__arr--next::before {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    font-size: 2rem;
+  }
+
+  .fotorama__arr--prev::before {
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    font-size: 2rem;
+    margin-left: 10px;    
+  }
+}
+
+.section-overlay {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#3d3c3c, .92);
   }
 }
 

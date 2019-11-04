@@ -59,6 +59,11 @@ $(document).ready(() => {
     elem.html(elem.html().replace(/(\S+)\s*$/, "<span>$1</span>"));
   });
 
+  $("section .h2").each(function() {
+    let elem = $(this);
+    elem.html(elem.html().replace(/^(\S+)/, "<span>$1</span>"));
+  });
+
   function onResize() {
     $(".carousel-services-content").equalHeights({
       useOuterHeight:true
