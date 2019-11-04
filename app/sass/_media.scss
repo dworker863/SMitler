@@ -1,5 +1,8 @@
 @import "vars";
 
+//    >> breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    767.98px
+
 @include media-breakpoint-down(lg) {
   header {
     .flex-container {
@@ -14,6 +17,12 @@
 
     .bottom-line {
       font-size: 0.75rem;
+    }
+  }
+
+  .services .owl-item:nth-child(odd) {
+    .carousel-services-item {
+      flex-direction: column;
     }
   }  
 }
