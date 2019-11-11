@@ -70,7 +70,20 @@ $(document).ready(() => {
     });
   }onResize();
   
-  // window.onResize = function() {
-  //   onResize();
-  // }
+  $("#form").submit(function() { //Change
+		let self = $(this);
+		$.ajax({
+			type: "POST",
+			url: "../mail.php", //Change
+			data: self.serialize()
+		}).done(function() {
+			$(".success-massage").addClass("active");
+			setTimeout(function() {
+				// Done Functions
+        self.trigger("reset");
+        $(".success-massage").removeClass("active");
+			}, 3000);
+		});
+		return false;
+	});
 })

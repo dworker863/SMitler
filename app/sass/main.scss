@@ -543,4 +543,96 @@ $colors: $blue, $red, $accent;
   }
 }
 
+.form {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 10% 0;
+  color: #ffffff;
+  padding: 7.4rem 0;
+
+  .success-massage {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    span {
+      margin: auto;
+      font-weight: bold;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+    }
+
+    & ~ * {
+      transition: all .5s ease;
+    }
+
+    &.active {
+      display: flex;
+
+      & ~ * {
+        filter: blur(10px);
+      }      
+    }
+  }
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba($accent, .92);
+  }
+
+  .form-logo img {
+    width: 100px;
+  }
+
+  .form-title {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.7rem;
+  }
+
+  #form {
+    margin-top: 2.5rem;
+  }
+
+  input, select, textarea {
+    background-color: transparent;
+    border: 1px solid rgba(#000, .1);
+    border-bottom: 2px solid rgba(#000, .1);
+    display: inline-block;
+    width: 100%;
+    color: #ffffff;
+    outline: none;
+    padding: 0.5rem 1.25rem;
+    font-weight: 300;
+    margin-bottom: 1.1rem;
+    border-radius: 2px;
+    
+    &::-webkit-input-placeholder {
+      color: #ffffff;
+    }
+
+    &::-moz-placeholder {
+      color: #ffffff;
+    }
+
+    &::-ms-input-placeholder {
+      color: #ffffff;
+    }
+
+    option {
+      color: #333333;
+    }
+  }
+  
+  .button {
+    margin-top: 1.5rem;
+  }
+}
+
 @import "media";

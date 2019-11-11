@@ -40,6 +40,7 @@ function scripts() {
         "node_modules/owl.carousel/dist/owl.carousel.js",
         "app/libs/equalHeight/src/jquery.equalheights.js",
         "app/libs/fotorama/fotorama.js",
+        "app/libs/selectize/js/standalone/selectize.min.js",
         "app/js/common.js"
     ])
         .pipe(plumber({
