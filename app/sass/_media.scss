@@ -76,6 +76,12 @@
       font-size: 0.75rem;
     }
   }
+
+  .review {
+    .quotes {
+      display: none;
+    }
+  }
 }
 
 @include media-breakpoint-down(sm) {

@@ -46,6 +46,14 @@ $(document).ready(() => {
     }
   });
 
+  $(".review-carousel").owlCarousel({
+    loop: true,
+    smartSpeed: 700,
+    items: 1,
+    dots: true,
+    autoHeight: true
+  });
+
   function carouselServices() {
     $(".carousel-services-content").each(function() {
       let elem = $(this);
@@ -69,6 +77,8 @@ $(document).ready(() => {
       useOuterHeight:true
     });
   }onResize();
+
+
   
   $("#form").submit(function() { //Change
 		let self = $(this);
