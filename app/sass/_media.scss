@@ -33,6 +33,18 @@
       margin-bottom: 3rem;
     }
   }
+
+  .form {
+    background-size: cover;
+
+    &:before {
+      width: 100%;
+    }
+
+    .button {
+      margin-top: 3rem;
+    }
+  }
 }
 
 @include media-breakpoint-down(md) {
