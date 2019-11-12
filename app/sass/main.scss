@@ -127,6 +127,36 @@ section {
   text-align: center;
 }
 
+.header-socials {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  height: 100%;
+  padding: 0 0.8rem;
+  border-left: 1px solid rgba(#fff, 0.15);    
+}
+
+.socials {
+  margin: auto;
+  ul {
+    li a {
+      display: block;
+      height: 38px;
+      width: 38px;
+      background-color: rgba(#fff, 0.25);
+      line-height: 38px;
+      text-align: center;
+      border-radius: 10em;
+      margin: 1.2rem 0;
+
+      .fab {
+        color: #2c2c2c;
+      }
+    }
+  }
+}
+
 header {
   height: 100vh;
   background-position: center;
@@ -259,36 +289,6 @@ header {
     }
   }
 
-  .header-socials {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: flex;
-    height: 100%;
-    padding: 0 0.8rem;
-    border-left: 1px solid rgba(#fff, 0.15);
-
-    .socials {
-      margin: auto;
-      ul {
-        li a {
-          display: block;
-          height: 38px;
-          width: 38px;
-          background-color: rgba(#fff, 0.25);
-          line-height: 38px;
-          text-align: center;
-          border-radius: 10em;
-          margin: 1.2rem 0;
-
-          .fab {
-            color: #2c2c2c;
-          }
-        }
-      }
-    }
-  }
-
   .bottom-line {
     position: absolute;
     width: 100%;
@@ -351,9 +351,7 @@ header {
     }
 
     &::before {
-      content: "\f3a5";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 400;
+      
       font-size: 0.75rem;
       margin-right: 0.5rem;
       color: #ffffff;
@@ -739,6 +737,7 @@ $colors: $blue, $red, $accent;
   padding-top: 4rem;
   padding-bottom: 4rem;
   background-size: cover;
+  background-position: 50%;
   &:before {
     background-color: rgba(#ffffff, .82);
   }
@@ -791,6 +790,118 @@ $colors: $blue, $red, $accent;
 
       .owl-next {
         right: -60px;
+      }
+    }
+  }
+}
+
+footer {
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+  color: #ffffff;
+  position: relative;
+
+  .logo {
+    width: 125px;
+    margin-bottom: 1rem;
+    + p {
+      font-size: 14px;
+      color: #666666;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .socials {
+    width: 100%;
+
+    li {
+      display: inline-block;
+      margin: 0.2rem;
+      a {
+        transition: all .3s ease;
+        .fab {
+          color: #ababab;        
+        }
+
+        &:hover {
+          background-color: rgba(#ababab, .5);
+        }
+      }
+    }
+  }
+  
+  .footer-menu {    
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: inline-block;
+    }
+    
+    li {
+      padding: .14rem 0;    
+      &:before {
+        content: "\f3a5";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 400;
+        font-size: 0.75rem;
+        color: #fff;
+        transition: color .3s ease;   
+      }
+
+      &:hover, &:focus {
+        a {
+          color: $accent;
+        }        
+        
+        &:before {
+          color: $accent;
+        }
+      }
+    }
+
+    li.active {
+      a {
+        color: $accent;
+      }
+      
+      &:before {
+        color: $accent;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      margin-left: .6rem;
+      color: #979797;
+      transition: color .5s ease;
+      font-size: 0.875rem;
+    }
+  }
+
+  .footer-info {
+    color: #797979;
+    font-size: 0.9rem;
+    padding: 0.2rem .5rem;
+
+    i {
+      position: absolute;
+      left: 0;
+      margin-top: .5rem;
+      margin-right: 0.5rem;
+      font-size: .8rem;
+    }
+
+    &.footer-phone {
+      font-family: "Fira Sans", sans-serif;
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-top: 1.4rem;
+      
+      i {
+        margin-top: .9rem;
+        left: 0.1rem;
+        color: #797979;
       }
     }
   }
