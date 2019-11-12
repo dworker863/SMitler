@@ -123,6 +123,10 @@ section {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
 header {
   height: 100vh;
   background-position: center;
@@ -644,6 +648,8 @@ $colors: $blue, $red, $accent;
 .review {
   padding-top: 5rem;
   padding-bottom: 5rem;
+  background-size: cover;
+  background-position: 50%;
 
   .h2 {
     margin-bottom: 2.5rem;
@@ -729,8 +735,65 @@ $colors: $blue, $red, $accent;
   } 
 }
 
-.text-center {
-  text-align: center;
+.partners {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-size: cover;
+  &:before {
+    background-color: rgba(#ffffff, .82);
+  }
+
+  .h2 {
+    margin-bottom: 3.5rem;
+
+    span {
+      color: $accent;
+    }
+  }
+
+  .carousel-partners {
+    position: relative;
+    .owl-stage {
+      display: flex;
+      align-items: center;
+    }
+
+    &-item {
+      text-align: center;
+    }
+    img {
+      display: inline-block;
+      width: auto;
+    }
+
+    .owl-nav {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 20px;
+      font-size: 1.5rem;
+      color: #999999;
+      font-weight: normal;
+
+      & > button {
+        position: absolute;
+        transition: opacity .5s ease;
+        padding: 0 1rem !important;
+
+        &:hover {
+          opacity: .6;
+        }
+      }
+
+      .owl-prev {
+        left: -60px;
+      }
+
+      .owl-next {
+        right: -60px;
+      }
+    }
+  }
 }
 
 @import "media";

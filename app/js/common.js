@@ -54,6 +54,29 @@ $(document).ready(() => {
     autoHeight: true
   });
 
+  $(".carousel-partners").owlCarousel({
+    loop: true,
+    smartSpeed: 700,
+    dots: false,
+    nav: true,
+    navText: ["<i class=\"fas fa-angle-left\"></i>", "<i class=\"fas fa-angle-right\"></i>"],
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 3
+      },
+      1200: {
+        items: 4
+      }
+    }
+  });
+
   function carouselServices() {
     $(".carousel-services-content").each(function() {
       let elem = $(this);
