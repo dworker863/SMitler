@@ -24,10 +24,17 @@
     html {
       background-color: #1a1a1a;
     }
+    body {
+      opacity: 0;
+    }
   </style>
 </head>
 
 <body>
+  <div class="preloader">
+    <div class="pulse"></div>
+  </div>
+
   <div id="my-page">
 
     <div id="my-header">
@@ -349,6 +356,8 @@
         </div>
       </footer>
     </div>
+
+    <div class="scroll-button" title="Наверх"><i class="fas fa-angle-double-up"></i></div>
 
   </div>
   <link rel="stylesheet" href="css/styles.min.css">

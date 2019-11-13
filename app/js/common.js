@@ -101,7 +101,17 @@ $(document).ready(() => {
     });
   }onResize();
 
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > $(this).height()) {
+      $(".scroll-button").addClass("active");
+    } else {
+      $(".scroll-button").removeClass("active");
+    }
+  });
 
+  $(".scroll-button").click(function() {
+    $("html, body").stop().animate({scrollTop: 0}, "slow");
+  })
   
   $("#form").submit(function() { //Change
 		let self = $(this);
@@ -120,3 +130,7 @@ $(document).ready(() => {
 		return false;
 	});
 })
+
+$(window).on("load", function() {
+  $(".preloader").delay(1000).fadeOut();
+});

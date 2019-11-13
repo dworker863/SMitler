@@ -49,6 +49,7 @@
 
 @include media-breakpoint-down(md) {
   header {
+    background-position: 80%;
     .flex-container {
       .flex-center {
         .info-block {
